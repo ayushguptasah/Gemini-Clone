@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import run from "../config/gemini";
+import runChat from "../config/gemini";
 
 export const Context = createContext();
 
@@ -7,7 +7,7 @@ const ContextProvider = (props) => {
 
 
     const onSent = async (prompt) => {
-        await run(prompt)
+        await runChat(prompt)
     }
 
     onSent("What is react")
@@ -17,9 +17,9 @@ const ContextProvider = (props) => {
     }
 
     return (
-        <Context.provider value={contextValue}>
+        <Context.Provider value={contextValue}>
             {props.children}
-        </Context.provider>
+        </Context.Provider>
     )
 }
 
