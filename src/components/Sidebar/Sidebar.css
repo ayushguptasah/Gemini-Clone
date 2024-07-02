@@ -33,6 +33,7 @@
 .sidebar .recent {
   display: flex;
   flex-direction: column;
+  animation: fadeIn 1.5s;
 }
 
 .sidebar .recent-tittle {
